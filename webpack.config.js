@@ -5,7 +5,7 @@ const parseURL = require('url').parse;
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const USER = process.env.USERNAME.replace(/[^A-Za-z0-9]/g, '');
+const USER = (process.env.USER || process.env.USERNAME).replace(/[^A-Za-z0-9]/g, '');
 const PORT = +(process.env.PORT || parseInt(USER, 36) % 999 + 8000);
 
 const PORT1 = PORT + 1;
