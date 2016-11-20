@@ -1,0 +1,40 @@
+{
+  "name": "gp-shinjo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^6.0.48",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "bootstrap": "^3.3.7",
+    "copy-webpack-plugin": "^4.0.1",
+    "light-request": "0.0.2",
+    "react": "^15.4.0",
+    "react-bootstrap": "^0.30.6",
+    "react-dom": "^15.4.0",
+    "ts-loader": "^1.2.1",
+    "typescript": "^2.0.6",
+    "typings": "^2.0.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --inline --hot",
+    "dev": "webpack-dev-server"
+  },
+  "homepage": "https://bitbucket.org/lightspeedc/gp-shinjo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://lightspeedc@bitbucket.org/lightspeedc/gp-shinjo.git"
+  },
+  "author": "LightSpeedC",
+  "license": "MIT"
+}
