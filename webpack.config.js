@@ -1,6 +1,7 @@
 'use strict';
 
 const http = require('http');
+const path = require('path');
 const parseURL = require('url').parse;
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -105,13 +106,13 @@ module.exports = {
 			{
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
-				loader: 'babel',
+				loaders: ['react-hot', 'babel'],
 				query: {presets: ['react', 'es2015']},
 			},
 			{
 				test: /\.tsx?$/,
 				exclude: /node_modules/,
-				loader: 'ts'
+				loaders: ['react-hot', 'ts'],
 			},
 		], // loaders
 	}, // module
@@ -138,7 +139,7 @@ module.exports = {
 }; // module.exports
 
 // start api server for webpack-dev-server
-if ('webpack-dev-server' === require('path').basename(process.argv[1], '.js'))
+if ('webpack-dev-server' === path.basename(process.argv[1], '.js'))
 	require('http').createServer((req, res) =>
 		res.end([PORT1, req.method, req.url, req.headers.host || ''].join(' '))
 	).listen(PORT1, () => console.log(' http://localhost:' + PORT1 + '/'));
