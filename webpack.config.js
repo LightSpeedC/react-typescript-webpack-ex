@@ -128,6 +128,7 @@ module.exports = {
 			{from: '**/*.html', context: 'src'},
 			{from: '**/*.css', context: 'src'},
 			{from: '**/*.ico', context: 'src'},
+			{from: '**/*.js', context: 'src'},
 			{from: '*', to: 'js', context: 'node_modules/react/dist'},
 			{from: '*', to: 'js', context: 'node_modules/react-dom/dist'},
 			{from: '*', to: 'js', context: 'node_modules/react-bootstrap/dist'},
